@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Clients</title>
+  <link rel='stylesheet' href='/stylesheets/listStyle.css' />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Clients List</h1>
+    <% if(items.length>0) { %>
+      <table class="table_details">
+        <thead>
+          <tr>
+            <th hidden>#</th>
+            <th hidden>Id</th>
+            <th>Client Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th></th>
+            <th hidden>Details</th>
+            <th hidden>Edit</th>
+            <th hidden>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<items.length;i++) { %>
+            <tr>
+
+              <td hidden>
+                <%=i%>
+              </td>
+              <td hidden>
+                <%=items[i]._id%></a>
+              </td>
+              <td>
+                <%= items[i].name%></a>
+              </td>
+              <td>
+                <%= items[i].email%></a>
+              </td>
+              <td>
+                <%= items[i].address%></a>
+              </td>
+              <td><a class="showDetail" href="/clients/show/<%= items[i]._id%> "> Show Details </td>    
+            </tr>
+
+            <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No clients found.</div>
+        <% } %>
+  </div>
+
+  <div>
+    <button><a href="/"> Back </a></button>
+  </div>
+  
+</body>
+
+</html>

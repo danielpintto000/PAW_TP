@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Employees</title>
+  <link rel='stylesheet' href='/stylesheets/listStyle.css' />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Employees List</h1>
+    <% if(items.length>0) { %>
+      <table class="table_details">
+        <thead>
+          <tr>
+            <th hidden>#</th>
+            <th hidden>Id</th>
+            <th>Name</th>
+            <th hidden>Email</th>
+            <th hidden>Password</th>
+            <th></th>
+            <th hidden>Details</th>
+            <th hidden>Edit</th>
+            <th hidden>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<items.length;i++) { %>
+            <tr>
+
+              <td hidden>
+                <%=i%>
+              </td>
+              <td hidden>
+                <%=items[i]._id%></a>
+              </td>
+              <td>
+                <%= items[i].name%></a>
+              </td>
+              <td hidden>
+                <%= items[i].email%></a>
+              </td>
+              <td hidden>
+                <%= items[i].password%></a>
+              </td>
+
+              <td><a class="showDetail" href="/admins/employees/show/<%= items[i]._id%> "> Show Details </td>    
+            </tr>
+
+            <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No employees found.</div>
+        <% } %>
+  </div>
+
+  <div>
+    <button><a href="/"> Back </a></button>
+  </div>
+  
+</body>
+
+</html>
+
+
+
+

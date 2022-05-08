@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Client</title>
+  <link rel="stylesheet" href="/stylesheets/editStyle.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Client Editing</h1>
+    <form action="/admins/clients/edit/<%=item._id%>" method="post">
+      <table class="table_details">
+        <tbody>
+          <tr hidden>
+            <td>Id</td>
+            <td>:</td>
+            <!-- Como o id não pode ser alterado usamos o input hidden para o enviar como campo do formulário. -->
+            <td>
+              <input type="hidden" name="_id" id="_id" value="<%= item._id %>" />
+              <%= item._id %>
+            </td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td>
+              <input name="email" id="email" type="email" required value="<%= item.email %>" />
+            </td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>:</td>
+            <td>
+              <input type="text" name="place" id="place" value="<%= item.place %>" />
+            </td>
+          </tr>
+            <td>
+              <input type="hidden" name="points" id="points" value="<%= item.points %>" />
+              <%= item.points %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+  
+  <h3><a class="show" href="/admins/clients">Show All Clients</a></h3>
+</body>
+
+</html>

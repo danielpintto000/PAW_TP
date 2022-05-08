@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Employee</title>
+  <link rel="stylesheet" href="/stylesheets/editStyle.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Employee Editing</h1>
+    <form action="/admins/employees/edit/<%=item._id%>" method="post">
+      <table class="table_details">
+        <tbody>
+          <tr hidden>
+            <td>Id</td>
+            <td>:</td>
+            <!-- Como o id não pode ser alterado usamos o input hidden para o enviar como campo do formulário. -->
+            <td>
+              <input type="hidden" name="_id" id="_id" value="<%= item._id %>" />
+              <%= item.name %>
+            </td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td>
+              <input type="email" name="email" id="email" value="<%= item.email %>" />
+            </td>
+          </tr>
+          <tr hidden>
+            <td>Password</td>
+            <td>:</td>
+            <td>
+              <input type="hidden" name="password" id="password" minlength="6" required value="<%= item.password %>" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+
+  <h3><a class="show" href="/admins/employees">Show All employee</a></h3>
+</body>
+
+</html>

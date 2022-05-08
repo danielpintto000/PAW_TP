@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Employee</title>
+  <link rel="stylesheet" href="/stylesheets/detailStyle.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Employee Details</h1>
+    <table class="table_details">
+      <tbody>
+        <tr hidden>
+          <td>Id</td>
+          <td>:</td>
+          <td>
+            <%= item._id %>
+          </td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>:</td>
+          <td>
+            <%= item.name %>
+          </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>:</td>
+          <td>
+            <%= item.email %>
+          </td>
+        </tr>
+        <tr hidden>
+            <td>Password</td>
+            <td>:</td>
+            <td>
+              <%= item.password %>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <h3><a href="/employees">Show All Employees</a></h3>
+</body>
+
+</html>

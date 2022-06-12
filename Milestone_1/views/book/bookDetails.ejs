@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Título do separador-->
+  <name>Book</name>
+
+  <!--Usar o CSS definido em public/stylesheets/detailStyle.css-->
+  <link rel="stylesheet" href="/stylesheets/detailStyle.css" />
+</head>
+
+<body>
+  <!--Criar uma divisão da classe container definida no CSS (stlesheets/detailStyle.css)-->
+  <div class="container">
+
+    <!--Título principal-->
+    <h1>Book Details</h1>
+
+    <td><img src="<%= item.cover%>"></td>
+
+    <!--Criar uma tabela da classe table_details definida no CSS (stlesheets/detailStyle.css)-->
+    <table class="table_details">
+      <tbody>
+        <tr hidden>
+          <td>Id</td>
+          <td>:</td>
+          <td>
+            <%= item._id %>
+          </td>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>:</td>
+          <td>
+            <%= item.name %>
+          </td>
+        </tr>
+        <tr>
+          <td>Author</td>
+          <td>:</td>
+          <td>
+            <%= item.author %>
+          </td>
+        </tr>
+        <tr>
+          <td>ISBN</td>
+          <td>:</td>
+          <td>
+            <%= item.isbn %>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>:</td>
+          <td>
+            <%= item.description %>
+          </td>
+        </tr>
+        <tr>
+          <td>State</td>
+          <td>:</td>
+          <td>
+            <%= item.state %>
+          </td>
+        </tr>
+        <tr>
+          <td>Stock</td>
+          <td>:</td>
+          <td>
+            <%= item.stock %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!--Apresentar a opção Show All Books que irá apresentar informação de todos os livros (books)-->
+  <h3><a href="/books">Show All Books</a></h3>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Título do separador-->
+  <title>Books</title>
+
+  <!--Usar o CSS definido em public/stylesheets/detailStyle.css-->
+  <link rel="stylesheet" href="/stylesheets/detailStyle.css" />
+</head>
+
+<body>
+  <!--Criar uma divisão da classe container definida no CSS (stlesheets/detailStyle.css)-->
+  <div class="container">
+
+    <!--Título principal-->
+    <h1>Books Details</h1>
+
+    <!--Apresentar capa de um livro (book)-->
+    <td><img src="<%= item.cover%>"></td>
+
+    <!--Criar uma tabela da classe table_details definida no CSS (stlesheets/detailStyle.css)-->
+    <table class="table_details">
+      <tbody>
+        <tr hidden>
+          <td>Id</td>
+          <td>:</td>
+          <td>
+            <%= item._id %>
+          </td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>:</td>
+          <td>
+            <%= item.name %>
+          </td>
+        </tr>
+        <tr>
+          <td>Author</td>
+          <td>:</td>
+          <td>
+            <%= item.author %>
+          </td>
+        </tr>
+        <tr>
+          <td>ISBN</td>
+          <td>:</td>
+          <td>
+            <%= item.isbn %>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>:</td>
+          <td>
+            <%= item.description %>
+          </td>
+        </tr>
+        <tr>
+          <td>State</td>
+          <td>:</td>
+          <td>
+            <%= item.state %>
+          </td>
+        </tr>
+        <tr>
+          <td>Stock</td>
+          <td>:</td>
+          <td>
+            <%= item.stock %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!--Apresentar a opção Edit que irá permitir editar informação de um livro (book)-->
+  <h3><a class="edit" href="/admins/books/edit/<%= item._id%>">Edit</a></h3>
+  <!--Apresentar a opção Show All Books que irá apresentar informação de todos os livros (books)-->
+  <h3><a class="show" href="/admins/books">Show All Books</a></h3>
+</body>
+
+</html>

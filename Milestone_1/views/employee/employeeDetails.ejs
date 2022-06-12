@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Título do separador-->
+  <title>Employee</title>
+
+  <!--Usar o CSS definido em public/stylesheets/detailStyle.css-->
+  <link rel="stylesheet" href="/stylesheets/detailStyle.css" />
+</head>
+
+<body>
+  <!--Criar uma divisão da classe container definida no CSS (stlesheets/detailStyle.css)-->
+  <div class="container">
+
+    <!--Título principal-->
+    <h1>Employee Details</h1>
+
+    <!--Criar uma tabela da classe table_details definida no CSS (stlesheets/detailStyle.css)-->
+    <table class="table_details">
+      <tbody>
+        <tr hidden>
+          <td>Id</td>
+          <td>:</td>
+          <td>
+            <%= item._id %>
+          </td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>:</td>
+          <td>
+            <%= item.name %>
+          </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>:</td>
+          <td>
+            <%= item.email %>
+          </td>
+        </tr>
+        <tr hidden>
+            <td>Password</td>
+            <td>:</td>
+            <td>
+              <%= item.password %>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!--Apresentar a opção Show All employee que irá apresentar informação relativa a todos os 
+    funcionários (employees)-->
+  <h3><a href="/employees">Show All Employees</a></h3>
+</body>
+
+</html>

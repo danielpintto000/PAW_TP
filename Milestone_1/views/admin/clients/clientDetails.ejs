@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Título do separador-->
+  <title>Client</title>
+
+  <!--Usar o CSS definido em public/stylesheets/detailStyle.css-->
+  <link rel="stylesheet" href="/stylesheets/detailStyle.css" />
+</head>
+
+<body>
+    <!--Criar uma divisão da classe container definida no CSS (stlesheets/detailStyle.css)-->
+    <div class="container">
+
+        <!--Título principal-->
+        <h1>Client Details</h1>
+
+        <!--Criar uma tabela da classe table_details definida no CSS (stlesheets/detailStyle.css)-->
+        <table class="table_details">
+          <tbody>
+            <tr hidden>
+              <td>Id</td>
+              <td>:</td>
+              <td>
+                <%= item._id %>
+              </td>
+            </tr>
+            <tr>
+              <td>Name</td>
+              <td>:</td>
+              <td>
+                <%= item.name %>
+              </td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>:</td>
+              <td>
+                <%= item.email %>
+              </td>
+          </tr>
+            <tr>
+              <td>Address</td>
+              <td>:</td>
+              <td>
+                <%= item.address %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+  <!--Apresentar a opção Edit que irá permitir editar informação de um cliente (client)-->
+  <h3><a class="edit" href="/admins/clients/edit/<%= item._id%>">Edit</a></h3>
+
+  <!--Apresentar a opção Show All Clients que irá apresentar informação de todos os clientes (clients)-->
+  <h3><a class="show" href="/admins/clients">Show All Clients</a></h3>
+</body>
+
+</html>

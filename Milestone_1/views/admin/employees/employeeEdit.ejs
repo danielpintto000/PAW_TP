@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Título do separador-->
+  <title>Employee</title>
+
+  <!--Usar o CSS definido em public/stylesheets/editStyle.css-->
+  <link rel="stylesheet" href="/stylesheets/editStyle.css" />
+</head>
+
+<body>
+  <!--Criar uma divisão da classe container definida no CSS (stlesheets/detailStyle.css)-->
+  <div class="container">
+
+    <!--Título do formulário-->
+    <h1>Employee Editing</h1>
+
+    <form action="/admins/employees/edit/<%=item._id%>" method="post">
+
+      <!--Criar uma tabela da classe table_details definida no CSS (stlesheets/editStyle.css)-->
+      <table class="table_details">
+        <tbody>
+          <tr hidden>
+            <td>Id</td>
+            <td>:</td>
+            <!-- Como o id não pode ser alterado usamos o input hidden para o enviar como campo do formulário. -->
+            <td>
+              <input type="hidden" name="_id" id="_id" value="<%= item._id %>" />
+              <%= item.name %>
+            </td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td>
+              <input type="email" name="email" id="email" value="<%= item.email %>" />
+            </td>
+          </tr>
+          <tr hidden>
+            <td>Password</td>
+            <td>:</td>
+            <td>
+              <input type="hidden" name="password" id="password" minlength="6" required value="<%= item.password %>" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+
+  <!--Apresentar a opção Show All employee que irá apresentar informação relativa a todos os 
+    funcionários (employees)-->
+  <h3><a class="show" href="/admins/employees">Show All employee</a></h3>
+</body>
+
+</html>

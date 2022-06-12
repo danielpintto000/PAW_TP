@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--Usar o CSS definido em public/stylesheets/style.css-->
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+
+  <!--Título do separador-->
+  <title>Create Client</title>
+</head>
+
+<body>
+  <form action="/admins/clients/create" method="POST" enctype="multipart/form-data">
+    <!--Apresentar uma divisão da classe form_create definida no CSS para pedir o nome do cliente (client)-->
+    <div class="form_create">
+      <label>Name: </label>
+      <input name="name" id="name" type="text" required />
+    </div>
+
+    <!--Apresentar uma divisão da classe form_create definida no CSS para pedir o do cliente (client)-->
+    <div class="form_create">
+      <label>Email: </label>
+      <input name="email" id="email" type="text" required />
+    </div>
+
+    <!--Apresentar uma divisão da classe form_create definida no CSS para pedir a morada do cliente (client)-->
+    <div class="form_create">
+      <label>Address: </label>
+      <input name="place" id="place" type="text" required />
+    </div>
+
+    <!--Apresentar uma divisão da classe form_create definida no CSS para apresentar o butão Save (guardar)-->
+    <div class="form_create">
+      <button type="submit">Save</button>
+    </div>
+    
+  </form>
+</body>
+
+</html>

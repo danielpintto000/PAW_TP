@@ -1,0 +1,46 @@
+/*Personalizar a aparência do body*/
+body {
+	margin: 5%;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: lightgray;
+    text-align: center;
+}
+  
+/*Personalizar a aparência do título principal*/
+h1 {
+    margin-inline: 40px;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 25px;
+    color: black;
+}
+ 
+/*Personalizar a aparência de uma hiperligação*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+  
+/*Personalizar a aparência de um erro (error)*/
+.Error {
+    color: red;
+    text-align: center;
+}
+  
+/*Personalizar a aparência de um butão (button)*/
+button {
+    margin-top: 10px;
+}
+  
+/*Personalizar a aparência de um formulário*/
+.form_create {
+    margin: auto;
+    margin-bottom: 10px;
+    padding: auto;
+    width: fit-content;
+    justify-content: center;
+    align-content: left;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}

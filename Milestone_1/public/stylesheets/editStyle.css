@@ -1,0 +1,48 @@
+/*Personalizar a aparência do body*/
+body {
+    margin: 5%;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: lightgrey;
+}
+
+/*Personalizar a aparência de uma hiperligação*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Personalizar a aparência de células de uma tabela*/
+th, td {
+    width: 20px;
+    text-align: left;
+    padding-inline: 20px;
+}
+
+/*Personalizar a aparência de uma tabela*/
+.table_details {
+    white-space: nowrap;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: auto;
+    width: fit-content;
+    display: block;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/*Personalizar a aparência de um butão (button)*/
+button {
+    margin-top: 10px;
+}
+
+/*Personalizar a posição de um butão (button)*/
+#button {
+    text-align: center;
+}
+
+/*Personalizar a aparência da opção para mostrar (show)*/
+.show {
+    color: darkgoldenrod;
+    text-decoration: none;
+}

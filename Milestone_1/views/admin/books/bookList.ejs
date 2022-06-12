@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Título do separador-->
+  <title>Books</title>
+
+  <!--Usar o CSS definido em public/stylesheets/listStyle.css-->
+  <link rel='stylesheet' href='/stylesheets/listStyle.css' />
+</head>
+
+<body>
+  <!--Criar uma divisão da classe container definida no CSS (stlesheets/detailStyle.css)-->
+  <div class="container">
+
+    <!--Título da lista-->
+    <h1>Books List</h1>
+
+    <!--Se existirem livros-->
+    <% if(items.length>0) { %>
+
+      <!--Criar uma tabela da classe table_details definida no CSS (stlesheets/listStyle.css)-->
+      <table class="table_details">
+        <thead>
+          <tr>
+            <th hidden>#</th>
+            <th hidden>Id</th>
+            <th>Books name</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Description</th>
+            <th hidden>State</th>
+            <th hidden>Stock</th>
+            <th></th>
+            <th hidden>Details</th>
+            <th hidden>Edit</th>
+            <th hidden>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<items.length;i++) { %>
+            <tr>
+              <td hidden>
+                <%=i%>
+              </td>
+              <td hidden>
+                <%=items[i]._id%></a>
+              </td>
+              <td>
+                <%= items[i].name%></a>
+              </td>
+              <td>
+                <%= items[i].author%></a>
+              </td>
+              <td>
+                <%= items[i].isbn%></a>
+              </td>
+              <td>
+                <%= items[i].description%></a>
+              </td>
+              <td hidden>
+                <%= items[i].state%></a>
+              </td>
+              <td hidden>
+                <%= items[i].stock%></a>
+              </td>
+
+              <!--Apresentar a capa de um livro (book)-->
+              <td class="coverShow showDetail" href="#">Cover<img src="<%= items[i].cover%>" /></td>
+              <!--Apresentar a opção Show Details que irá apresentar detalhes de um livro (book)-->
+              <td><a class="showDetail" href="/admins/books/show/<%= items[i]._id%> "> Show Details </td>
+              <!--Apresentar a opção Edit que irá permitir editar informação relativa a um livro (book)-->
+              <td><a class="edit" href="/admins/books/edit/<%= items[i]._id%> "> Edit </a></td>
+              <!--Apresentar a opção Delete que irá apagar informação relativa a um livro (book)-->
+              <td><a class="delete" href="/admins/books/delete/<%= items[i]._id%> "> Delete </a></td>
+            </tr>
+
+            <% } %>
+        </tbody>
+      </table>
+      
+      <!--Se não existirem livros-->
+      <% } else { %>
+        <div>No Books found.</div>
+      <% } %>
+  </div>
+
+  <!--Apresentar a opção Create new Books que irá permitir criar novos livros (books)-->
+  <h3><a href="/admins/books/create">Create new Books</a></h3><br>
+
+  <div>
+    <!--Apresentar o butão Back que fará voltar atrás-->
+    <button><a href="/admins"> Back </a></button>
+  </div>
+  
+</body>
+
+</html>

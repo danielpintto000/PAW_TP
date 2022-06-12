@@ -1,0 +1,80 @@
+/*Personalizar a aparência do body*/
+body {
+    margin: 5%;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: lightgrey;
+}
+  
+/*Personalizar a aparência de uma hiperligação*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+  
+/*Personalizar a aparência do título principal*/
+h1 {
+    margin-inline: 40px;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 25px;
+}
+  
+/*Personalizar a aparência de um título h3*/
+h3 {
+    margin-inline: 40px;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 20px;
+}
+  
+/*Personalizar a aparência de células de uma tabela*/
+th, td {
+    width: 20px;
+    text-align: center;
+    padding-inline: 20px;
+}
+  
+/*Personalizar a aparência de uma tabela*/
+.table_details {
+    white-space: nowrap;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: auto;
+    width: fit-content;
+    display: block;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+  
+/*Personalizar a aparência da opção para mostrar detalhes (showDetail)*/
+.showDetail {
+    color: darkgoldenrod;
+}
+  
+/*Personalizar a aparência da opção de edição (edit)*/
+.edit {
+    color: darkblue;
+}
+  
+/*Personalizar a aparência da opção de deleção (delete)*/
+.delete {
+    color: darkred;
+}
+  
+/*Personalizar o display da capa de um livro (book)*/
+.coverShow img {
+    display: none;
+}
+
+/*Personalizar a aparência da capa de um livro (book) aquando de hover na imagem*/
+.coverShow:hover img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+  
+/*Personalizar a aparência da capa de um livro (book) auqnado de hover*/
+.coverShow:hover {
+    color: transparent;
+}

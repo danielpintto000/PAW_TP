@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <!--Usar o CSS definido em src/app/Book/book-details/book-details.component.css-->
+        <link rel="stylesheet" href="book-details.component.css">
+    </head>
+    <body>
+        <nav>
+            <!--Criar uma divisão da classe card definida no CSS (Book/book-details/book-details.component.css)-->
+            <div class="card" *ngIf="book">
+
+                <!--Título do formulário-->
+                <h1>Book Details</h1>
+
+                <!--Criar um formulário da classe intem-form definida no CSS (book-details.component.css)-->
+                <div class="item-form">
+
+                    <!--Criar um campo de texto da classe txt-field para o nome do livro-->
+                    <div class="txt-field">
+                        <input disabled id="form-name" [(ngModel)]="book.name" type="text">
+                        <label for="form-name">Name</label>
+                    </div>
+
+                    <!--Criar um campo de texto da classe txt-field para a descrição do livro-->
+                    <div class="txt-field">
+                        <input disabled id="form-description" [(ngModel)]="book.description" type="text">
+                        <label for="form-description">Description</label>
+                    </div>
+
+                    <!--Criar um campo de texto da classe txt-field para o nome do autor do livro-->
+                    <div class="txt-field">
+                        <input disabled id="form-author" [(ngModel)]="book.author" type="text">
+                        <label for="form-author">Author</label>
+                    </div>
+
+                    <!--Criar um campo de texto da classe txt-field para o ISBN do livro-->
+                    <div class="txt-field">
+                        <input disabled id="form-isbn" [(ngModel)]="book.isbn" type="number">
+                        <label for="form-isbn">ISBN</label>
+                    </div>
+
+                    <!--Criar um campo de texto da classe txt-field para o preço do livro-->
+                    <div class="txt-field">
+                        <input disabled id="form-price" [(ngModel)]="book.price" type="number">
+                        <label for="form-price">Price</label>
+                    </div>
+
+                    <!--Criar um campo de texto da classe txt-field para o stock do livro-->
+                    <div class="txt-field">
+                        <input disabled id="form-stock"  [(ngModel)]="book.stock" type="number">
+                        <label for="form-stock">Stock</label>
+                    </div>
+
+                    <div class="txt-field">
+                        <input disabled id="form-state"  [(ngModel)]="book.state" type="string">
+                        <label for="form-state">State</label>
+                    </div>
+
+
+                    <!--Título da secção de capa-->
+                    <h4>Cover</h4>
+                </div>
+
+                <!--Criar um campo da classe center para apresentar uma capa -->
+                <img class="center" src="{{book.cover}}" type="image">
+
+                <!--Criar um butão da classe buttons center para listar livros quando selecionado-->
+                <button class="buttons center" (click)="navigateToBooks()"> List Books </button>
+            </div>
+        </nav>
+    </body>
+</html>

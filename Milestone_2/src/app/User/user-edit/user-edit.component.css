@@ -1,0 +1,128 @@
+/*Personalizar a estrutura do formulário*/
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+
+/*Personalizar a posição do título do formulário*/
+.card h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+/*Personalizar a aparência do elemento body*/
+body {
+    background-color: rgb(224, 224, 224);
+}
+
+/*Personalizar a posição do formulário*/
+.item-form {
+    position: re;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/*Personalizar a posição de um campo de texto*/
+.txt-field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+/*Personalizar a aparência de um campo de texto*/
+.txt-field input {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    height: 10px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/*Personalizar a aparência de uma etiqueta*/
+.txt-field label {
+    position: absolute;
+    top: 0%;
+    left: 5px;
+    color: #4fb354;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+/*Personalizar um campo válido*/
+.txt-field input:valid ~ label {
+    top: -5px;
+    color: #4fb354;
+}
+
+/*Personalizar a aparência do butão de edição*/
+.button-edit {
+    width: 45%;
+    height: 50px;
+    border: 1px solid;
+    background: #4fb354;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    left: 25%;
+    transform: translate(-55%, -30%);
+    white-space: nowrap;
+}
+
+/*Personalizar a aparência do butão de navegação*/
+.button-navigate {
+    width: 50%;
+    height: 50px;
+    border: 1px solid;
+    background: #4fb354;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    left: 25%;
+    transform: translate(-35%, -30%);
+    white-space: nowrap;
+}
+
+/*Personalizar a aparência do display consoante a largura do ecrã*/
+@media screen and (max-width:670px) {
+    /*Personalizar a estrutura do formulário*/
+    .card {
+        position: absolute;
+        top: 70%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 400px;
+        min-width: 290px;
+        background: white;
+        border-radius: 10px;
+    }
+
+    /*Personalizar a aparência dos butões*/
+    .buttons {
+        min-width: 160px;
+    }
+
+    /*Utilizado para personalizar a posição de um determinado item*/
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}

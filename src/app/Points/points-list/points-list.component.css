@@ -1,0 +1,87 @@
+/*Personalizar a aparência de uma tabela*/
+.table {
+    position: fixed;
+    top: 100px;
+    left: 10%;
+    width: 80%;
+    background: white;
+    border-radius: 10px;
+}
+
+/*Personalizar a aparência do elemento body*/
+body {
+    background-color: rgb(224, 224, 224);
+}
+
+/*Personalizar a aparência de uma linha de uma tabela*/
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 30px;
+}
+
+/*Personalizar a aparência de uma coluna de uma tabela*/
+.col-md-2 {
+    grid-column-end: span 1;
+}
+
+/*Utilizado para personalizar a posição de um determinado item*/
+.center {
+    justify-self: center;
+    align-self: center;
+}
+
+/*Personalizar a posição de texto*/
+.text-center {
+    text-align: center;
+}
+
+/*Personalizar a aparência do display consoante a largura do ecrã*/
+@media screen and (max-width: 1000px) {
+    /*Personalizar a aparência de uma linha de uma tabela*/
+    .row {
+        display: grid;
+        grid-template-columns: repeat(4, 2fr);
+        height: 60px;
+    }
+
+    /*Personalizar a aparência de uma tabela*/
+    .table {
+        position: fixed;
+        top: 20%;
+        left: 10%;
+        width: 80%;
+        background: white;
+        border-radius: 10px;
+    }
+
+    /*Personalizar a aparência de uma coluna de uma tabela*/
+    .col-md {
+        grid-column-end: span 2;
+    }
+}
+
+/*Personalizar a aparência do display consoante a largura do ecrã*/
+@media screen and (max-width: 450px) {
+    /*Personalizar a aparência de uma linha de uma tabela*/
+    .row {
+        display: grid;
+        grid-template-columns: repeat(3, 3fr);
+        height: 50px;
+    }
+
+    /*Personalizar a aparência de uma tabela*/
+    .table {
+        position: fixed;
+        top: 35%;
+        left: 10%;
+        width: 80%;
+        background: white;
+        border-radius: 10px;
+    }
+
+    /*Personalizar a aparência de uma coluna de uma tabela*/
+    .col-md {
+        grid-column-end: span 2;
+    }
+}

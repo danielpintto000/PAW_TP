@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <!--Usar o CSS definido em src/app/login/login.component.css-->
+        <link href="login.component.css">
+    </head>
+    <body>
+        <!--Criar uma divisão da classe login-card definida no CSS (src/app/login/login.component.css)-->
+        <div class="login-card">
+
+            <!--Título do formulário da classe text-center definida no CSS (login/login.component.css)-->
+            <h1 class="text-center">Login</h1>
+
+            <!--Criar um formulário da classe login-form definida no CSS (login/login.component.css)-->
+            <div class="login-form">
+
+                <!--Criar um campo de texto da classe txt-field para o email-->
+                <div class="txt-field">
+                    <input id="form-email" [(ngModel)]="email" type="text">
+                    <span></span>
+                    <label for="form-email">Email</label>
+                </div>
+
+                <!--Criar um campo de texto da classe txt-field para a palavra passe (password)-->
+                <div class="txt-field">
+                    <input [(ngModel)]="password" type="password">
+                    <span></span>
+                    <label>Password</label>
+                </div>            
+
+                <!--Cria um butão da classe login-button com a opção Login que irá realizar o login-->
+                <button class="login-button" (click)="login()"> Login </button>
+                
+                <!--Cria um butão da classe register com a opção Register que irá fazer o registo-->
+                <div class="register">Not a Member?
+                    <button class="register-button" (click)="register()"> Register </button> 
+                </div>
+                
+            </div>
+        </div>
+    </body>
+    
+</html>
+

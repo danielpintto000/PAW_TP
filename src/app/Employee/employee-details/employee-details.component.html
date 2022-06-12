@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <!--Usar o CSS definido em src/app/Employee/employee-details/employee-details.component.css-->
+        <link rel="stylesheet" href="employee-details.component.css">
+    </head>
+    <body>
+        <!--Criar uma divisão da classe card definida no CSS (employee-details/employee-details.component.css)-->
+        <div class="card" *ngIf="employee">
+
+            <!--Título do formulário-->
+            <h1>Employee Details</h1>
+
+            <!--Criar um formulário da classe intem-form definida no CSS (employee-details.component.css)-->
+            <div class="item-form">
+
+                <!--Criar um campo de texto da classe txt-field para o nome (name) do funcionário (employee)-->
+                <div class="txt-field">
+                    <input disabled id="form-place" placeholder="Name" [(ngModel)]="employee.name" type="text">
+                    <label for="form-place">Name</label>
+                </div>
+
+                <!--Criar um campo de texto da classe txt-field para o email do funcionário (employee)-->
+                <div class="txt-field">
+                    <input disabled id="form-max" placeholder="Email" [(ngModel)]="employee.email" type="text">
+                    <label for="form-max">Email</label>
+                </div>
+
+                <!--Criar um campo de texto da classe txt-field para o cargo (role) do funcionário (employee)-->
+                <div class="txt-field">
+                    <input disabled id="form-limit" placeholder="Role" [(ngModel)]="employee.role" type="text">
+                    <label for="form-limit">Role</label>
+                </div>
+
+                <!--Criar um butão da classe buttons para listar funcionários (employees) quando selecionado-->
+                <button class="buttons" (click)="navigateToEmployees()"> List Employees </button>
+            </div>
+        </div>
+    </body>
+</html>

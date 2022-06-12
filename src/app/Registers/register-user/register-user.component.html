@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <!--Usar o CSS definido em src/app/Registers/register-user/register-user.component.css-->
+        <link rel="stylesheet" href="register-user.component.css">
+    </head>
+    <body>
+        <!--Criar uma divisão da classe card definida no CSS (register-user/register-user.component.css)-->
+        <div class="card">
+
+            <!--Título do formulário-->
+            <h1>Register</h1>
+            <!--Criar um formulário da classe login-form definida no CSS (register-user.component.css)-->
+            <div class="login-form">
+
+                <!--Criar um campo de texto da classe txt-field para o nome (name)-->
+                <div class="txt-field">
+                    <input id="form-name" [(ngModel)]="name" type="text">
+                    <label for="form-name">Name</label>
+                </div>
+
+                <!--Criar um campo de texto da classe txt-field para o email-->
+                <div class="txt-field">
+                    <input id="form-email" [(ngModel)]="email" type="text">
+                    <label for="form-email">Email</label>
+                </div>
+
+                <!--Criar um campo de texto da classe txt-field para a palavra passe (password)-->
+                <div class="txt-field">
+                    <input id="form-password" [(ngModel)]="password" type="password">
+                    <label for="form-password">Password</label>
+                </div>
+
+                <div class="txt-field">
+                    <input id="form-address" [(ngModel)]="address" type="text">
+                    <label for="form-address">Address</label>
+                </div>
+
+                <!--Cria um butão da classe register-button com a opção Register que irá fazer o registo-->
+                <button class="buttons center" (click)="register()"> Register </button>
+
+                <!--Cria um butão da classe login-button com a opção Login que irá realizar o login-->
+                <div class="login">
+                    Already a Member?
+                    <button class="login-button" (click)="login()"> Login </button>
+                </div>
+
+                <!--Cria um butão da classe item-button text-center com a opção Back que irá voltar
+                    ao URL anterior-->
+                <button class="buttons center" (click)="back()"> Back </button> 
+            </div>
+        </div>       
+    </body>
+</html>

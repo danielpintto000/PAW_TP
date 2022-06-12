@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <!--Usar o CSS definido em src/app/app.component.css-->
+        <link rel="stylesheet" href="app.component.css">
+    </head>
+    <body  (mouseenter)="setUserName()" (mouseleave)="setUserName()">
+        <header>
+            <div class="container">
+        
+                <img class="logo" src="http://localhost:3000/uploads/logo.png" />
+        
+                <nav>
+                    <ul class="main-menu">
+                        <li *ngIf="adminOrEmployee" ><a (click)="navigateToEmployees()">Employees List</a></li>
+                        <li *ngIf="admin" ><a (click)="navigateToUsers()">Users List</a></li>
+                        <li><a (click)="navigateToBooks()">Books</a></li>
+                        <li *ngIf="user"><a (click)="points()">Points</a></li>
+                        <li *ngIf="user"><a (click)="navigateToShoppingCart()"><img class="cart" src="http://localhost:3000/uploads/shopping cart.png" /></a></li>
+                        <li><a>Access</a>
+                            <ul class="sub-menu">
+                                <li><a (click)="login()">Login</a></li>
+                                <li><a (click)="logout()">Logout</a></li>
+                                <li><a (click)="register()">Register</a></li>
+                            </ul>
+                        </li>
+                        <li>{{userName}}</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <router-outlet></router-outlet>
+    </body>
+</html>
